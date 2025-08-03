@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">大富翁游戏</string>
+    <string name="start_game">开始游戏</string>
+    <string name="player_setup">玩家设置</string>
+    <string name="player_name_hint">输入玩家姓名</string>
+    <string name="add_player">添加玩家</string>
+    <string name="remove_player">移除玩家</string>
+    <string name="roll_dice">掷骰子</string>
+    <string name="buy_property">购买房产</string>
+    <string name="build_house">建造房屋</string>
+    <string name="build_hotel">建造酒店</string>
+    <string name="end_turn">结束回合</string>
+    <string name="money_format">$%d</string>
+    <string name="current_player">当前玩家: %s</string>
+    <string name="player_money">资金: $%d</string>
+    <string name="property_price">价格: $%d</string>
+    <string name="property_rent">租金: $%d</string>
+    <string name="dice_result">骰子: %d + %d = %d</string>
+    <string name="passed_start">经过起点，获得 $200</string>
+    <string name="pay_rent">向 %s 支付租金 $%d</string>
+    <string name="purchase_success">成功购买 %s</string>
+    <string name="purchase_failed">资金不足，无法购买</string>
+    <string name="game_over">游戏结束</string>
+    <string name="winner">获胜者: %s</string>
+    <string name="restart_game">重新开始</string>
+    <string name="in_jail">在监狱中</string>
+    <string name="jail_turns">剩余回合: %d</string>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/player_info_background"
+    android:layout_marginVertical="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <View
+            android:id="@+id/viewPlayerColor"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/player_color_indicator" />
+
+        <TextView
+            android:id="@+id/tvPlayerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="玩家姓名"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+
+        <TextView
+            android:id="@+id/tvPlayerStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正常"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:background="@drawable/status_background"
+            android:padding="4dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPlayerMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$1500"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/button_primary"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tvPlayerProperties"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="房产: 0"
+        android:textSize="12sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="2dp" />
+
+    <TextView
+        android:id="@+id/tvPlayerAssets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="总资产: $1500"
+        android:textSize="12sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tvPropertyList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="无房产"
+        android:textSize="10sp"
+        android:textColor="@color/text_secondary"
+        android:maxLines="2"
+        android:ellipsize="end" />
+
+</LinearLayout>

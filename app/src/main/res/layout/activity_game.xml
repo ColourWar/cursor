@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/board_background">
+
+    <!-- 棋盘容器 -->
+    <FrameLayout
+        android:id="@+id/boardContainer"
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/board_background">
+
+        <!-- 自定义棋盘视图 -->
+        <com.monopoly.game.view.BoardView
+            android:id="@+id/boardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- 中央信息区域 -->
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/center_info_background"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvCurrentPlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/current_player"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvPlayerMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/player_money"
+                android:textSize="16sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 骰子显示 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/ivDice1"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/dice_1"
+                    android:layout_marginEnd="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivDice2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/dice_1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDiceResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 游戏按钮 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnRollDice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/roll_dice"
+                    style="@style/GameButton" />
+
+                <Button
+                    android:id="@+id/btnEndTurn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/end_turn"
+                    android:enabled="false"
+                    style="@style/GameButton" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- 左侧玩家信息 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPlayerInfo"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 右侧动作面板 -->
+    <LinearLayout
+        android:id="@+id/actionPanel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        android:background="@drawable/action_panel_background"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvActionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvActionDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnBuyProperty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/buy_property"
+            android:visibility="gone"
+            style="@style/GameButton" />
+
+        <Button
+            android:id="@+id/btnBuildHouse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/build_house"
+            android:visibility="gone"
+            style="@style/GameButton" />
+
+        <Button
+            android:id="@+id/btnBuildHotel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/build_hotel"
+            android:visibility="gone"
+            style="@style/GameButton" />
+
+    </LinearLayout>
+
+    <!-- 游戏消息显示 -->
+    <TextView
+        android:id="@+id/tvGameMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/message_background"
+        android:padding="12dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>
