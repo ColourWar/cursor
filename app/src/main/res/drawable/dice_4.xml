@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 骰子背景 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/dice_background" />
+            <stroke android:width="2dp" android:color="@color/dice_dots" />
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+    
+    <!-- 左上点 -->
+    <item android:gravity="start|top" android:left="8dp" android:top="8dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/dice_dots" />
+            <size android:width="8dp" android:height="8dp" />
+        </shape>
+    </item>
+    
+    <!-- 右上点 -->
+    <item android:gravity="end|top" android:right="8dp" android:top="8dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/dice_dots" />
+            <size android:width="8dp" android:height="8dp" />
+        </shape>
+    </item>
+    
+    <!-- 左下点 -->
+    <item android:gravity="start|bottom" android:left="8dp" android:bottom="8dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/dice_dots" />
+            <size android:width="8dp" android:height="8dp" />
+        </shape>
+    </item>
+    
+    <!-- 右下点 -->
+    <item android:gravity="end|bottom" android:right="8dp" android:bottom="8dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/dice_dots" />
+            <size android:width="8dp" android:height="8dp" />
+        </shape>
+    </item>
+</layer-list>

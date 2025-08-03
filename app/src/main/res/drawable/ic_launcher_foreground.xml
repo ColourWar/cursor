@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 房子图标 -->
+    <path
+        android:fillColor="@color/property_red"
+        android:pathData="M35,45 L54,35 L73,45 L73,65 L35,65 Z" />
+    <path
+        android:fillColor="@color/property_yellow"
+        android:pathData="M45,55 L63,55 L63,65 L45,65 Z" />
+    <!-- 美元符号 -->
+    <path
+        android:fillColor="@color/button_primary"
+        android:pathData="M50,70 Q48,70 48,72 Q48,74 50,74 Q52,74 52,72 Q52,70 50,70 Z"
+        android:strokeColor="@color/white"
+        android:strokeWidth="1" />
+</vector>
