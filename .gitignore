@@ -16,5 +16,12 @@ android-tools.zip
 .DS_Store
 Thumbs.db
 
+# Windows specific
+*.exe
+*.msi
+*.tmp
+desktop.ini
+$RECYCLE.BIN/
+
 # Large downloads
 *.zip
