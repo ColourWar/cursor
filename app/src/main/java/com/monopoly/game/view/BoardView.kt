@@ -38,9 +38,8 @@ class BoardView @JvmOverloads constructor(
         invalidate()
     }
     
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        canvas ?: return
         
         val board = gameBoard ?: return
         

@@ -16,9 +16,9 @@
     <string name="player_money">资金: $%d</string>
     <string name="property_price">价格: $%d</string>
     <string name="property_rent">租金: $%d</string>
-    <string name="dice_result">骰子: %d + %d = %d</string>
+    <string name="dice_result" formatted="false">骰子: %d + %d = %d</string>
     <string name="passed_start">经过起点，获得 $200</string>
-    <string name="pay_rent">向 %s 支付租金 $%d</string>
+    <string name="pay_rent" formatted="false">向 %s 支付租金 $%d</string>
     <string name="purchase_success">成功购买 %s</string>
     <string name="purchase_failed">资金不足，无法购买</string>
     <string name="game_over">游戏结束</string>
